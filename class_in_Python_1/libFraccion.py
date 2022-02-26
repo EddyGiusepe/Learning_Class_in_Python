@@ -1,3 +1,7 @@
+'''
+Data Scientist Jr.: Dr.Eddy Giusepe Chirinos Isidro
+Link de estudo: https://www.youtube.com/watch?v=E76ErVQ1xNI&list=PLqlQ2-9ypflT5Lx864RXtJx4s7i3sxgs0&index=17
+'''
 class Fraccion:
     def __init__(self, num=0, den=1):
         if isinstance(num, int):
