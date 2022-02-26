@@ -4,6 +4,8 @@
 
 ![image](https://user-images.githubusercontent.com/69597971/155855857-0aed83bf-3987-4f79-9fc7-98dc1a9954c4.png)
 
+![image](https://user-images.githubusercontent.com/69597971/155855881-705956d9-47c2-46aa-b8e5-0ca38caff673.png)
+
 
 ``Programação orientada a objetos`` (POO) é um método de estruturação de um programa pelo empacotamento relacionado a propriedades e comportamentos de objetos. Neste tutorial, você vai aprender o básico de orientação a objetos em Python. Conceitualmente, objetos são como componentes de um sistema. Pense em um programa como uma linha de montagem de uma fábrica. A cada passo dessa linha de montagem, uma parte do sistema processa algum material, transformando uma matéria-prima em um produto final. Um objeto contém dados como a matéria-prima dessa linha de montagem e seu comportamento neste processo de fabricação.  
 
