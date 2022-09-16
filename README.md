@@ -23,6 +23,7 @@ Programação orientada a objetos é um paradigma em que propriedades e comporta
 
 um objeto pode representar uma pessoa com suas propriedades, como ``nome``, ``idade`` e ``endereço`` e seus comportamentos como ``andar``, ``falar``, ``respirar`` e correr. 
 
+
 **Outro exemplo:** 
 
 pode ser um e-mail em que as propriedades são a lista de destinatários, assunto e corpo da mensagem e o comportamento pode ser anexar um arquivo e fazer o envio.
