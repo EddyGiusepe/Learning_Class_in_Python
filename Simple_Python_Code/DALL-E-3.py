@@ -2,6 +2,8 @@
 """
 Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
 
+Link de estudo --> https://platform.openai.com/docs/guides/images/usage?context=node
+
 Image Generation: DALL-E 3
 ==========================
 Por padrão, as imagens são geradas com standard qualidade, mas ao 
