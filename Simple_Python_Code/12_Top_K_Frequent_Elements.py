@@ -33,8 +33,7 @@ class Solution:
 
 if __name__ == '__main__':
     minhaClass = Solution()
-    nums = [1, 2, 3, 3, 3, 2, 4, 5, 5, 5]
+    nums = [1, 3, 3, 2, 4, 5, 5, 5]
     k = 2
     resposta = minhaClass.topKFrequent(nums=nums, k=k)
     print(resposta)
-    
