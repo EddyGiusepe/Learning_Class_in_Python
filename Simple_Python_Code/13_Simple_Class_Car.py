@@ -12,4 +12,12 @@ class Car:
             "ano": ano
         }
 
-    def 
+    def get_marca(self):
+        return self.__details__["marca"]
+    
+
+if __name__ == '__main__':
+    garagem = [Car("Modelo S", "Tesla", 2020), Car("Corolla", "Toyota", 2019)]
+    resposta = garagem[0].get_marca()
+    print(resposta)
+    
