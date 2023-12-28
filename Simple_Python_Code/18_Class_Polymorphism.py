@@ -38,6 +38,7 @@ class Aviao:
 
 
 
+
 if __name__ == "__main__":
     carro_1 = Carro("Ford", "Mustang")
     bote_1 = Bote("Ibiza", "Touring 20")
