@@ -1,4 +1,7 @@
 '''
+Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
+
+
  https://docs.python.org/3/library/
 https://www.youtube.com/watch?v=5-qU3rsKZz4
 '''
