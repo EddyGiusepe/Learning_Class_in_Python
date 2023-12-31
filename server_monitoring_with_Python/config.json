@@ -1,0 +1,8 @@
+{
+    "servers": [
+        "http://www.microsoft.com",
+        "http://google.com",
+        "http://www.servidorX.com",
+        "https://www.facebook.com/"
+    ]
+}
