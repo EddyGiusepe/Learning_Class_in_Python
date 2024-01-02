@@ -55,9 +55,9 @@ Por que Usar?
                                 o que pode melhorar a capacidade de resposta do seu programa.
 
 * Tarefas vinculadas a E/S (I/O-Bound Tasks): É particularmente útil para tarefas E/S-bound, onde
-os threads podem executar operações que não exigem muita CPU, como ler/gravar arquivos, fazer
-solicitações de rede ou aguardar a entrada do usuário. Threads podem ceder controle ao aguardar E/S (I/O),
-permitindo que outros threads sejam executados.                   
+  os threads podem executar operações que não exigem muita CPU, como ler/gravar arquivos, fazer
+  solicitações de rede ou aguardar a entrada do usuário. Threads podem ceder controle ao aguardar E/S (I/O),
+  permitindo que outros threads sejam executados.     
 """
 import threading
 import time
