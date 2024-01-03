@@ -58,6 +58,7 @@ Por que Usar?
   os threads podem executar operações que não exigem muita CPU, como ler/gravar arquivos, fazer
   solicitações de rede ou aguardar a entrada do usuário. Threads podem ceder controle ao aguardar E/S (I/O),
   permitindo que outros threads sejam executados.     
+  
 """
 import threading
 import time
