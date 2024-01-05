@@ -55,11 +55,11 @@ def main():
     servers = config["servers"]
 
     while True:
-        logging.info("Starting server check.")
+        logging.info("Iniciando verificação do servidor..")
         server_statuses = check_servers(servers)
 
-        logging.info("Waiting 60 seconds for the next check . . . \n")
-        time.sleep(60)
+        logging.info("Aguardando 20 segundos pela próxima verificação . . . \n")
+        time.sleep(20)
 
 
 
