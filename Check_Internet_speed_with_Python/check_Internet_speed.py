@@ -8,7 +8,6 @@ Instale (https://pypi.org/project/speedtest-cli/):
 
 $ pip install speedtest-cli
 """
-
 import speedtest
 
 speed_test = speedtest.Speedtest()
