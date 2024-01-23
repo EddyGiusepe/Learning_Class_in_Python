@@ -19,4 +19,5 @@ def bytes_to_mb(bytes):
 
 download_speed = bytes_to_mb(speed_test.download())
 
+
 print("A sua velocidade de Download é: ", download_speed, "MB")
