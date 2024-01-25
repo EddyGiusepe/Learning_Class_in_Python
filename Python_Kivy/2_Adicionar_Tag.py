@@ -9,8 +9,8 @@ class MyLabelApp(App):
     def build(self):
         texto = input("Digite seu texto: ")
         rotulo = Label(text=texto,
-                       font_size="80 sp", # Unidade de medida --> scaled pixels
-                       color="green") 
+                       font_size="20 sp", # Unidade de medida --> scaled pixels
+                       color="#DF7848") # color: "green" ou "#6ADF48" (em sistema Hexadecimal)
         return rotulo
 
 
