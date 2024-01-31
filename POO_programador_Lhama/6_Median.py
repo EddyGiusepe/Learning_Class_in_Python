@@ -15,3 +15,4 @@ if __name__ == '__main__':
     
     mediana = findMedian(lista)
     print(f"A Mediana da lista é: {mediana}")
+    
