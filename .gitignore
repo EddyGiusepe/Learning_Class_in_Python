@@ -132,3 +132,4 @@ dmypy.json
 
 # EddyGiusepe
 venv_class/
+__pycache__/
