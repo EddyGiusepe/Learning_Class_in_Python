@@ -35,10 +35,10 @@ class MyTaskSet(TaskSet):
         r = self.client.get("http://0.0.0.0:8000/")
         print(r.status_code) 
 
-    wait_time = constant(0.1)  # Tempo entre as execuções das tarefas
 
 
 class MyUser(HttpUser):
     tasks = [MyTaskSet]
-    min_wait = 0
-    max_wait = 0
+    wait_time = constant(10)  # Tempo entre as execuções das tarefas
+    # min_wait = 0
+    # max_wait = 0
