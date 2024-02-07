@@ -134,3 +134,4 @@ dmypy.json
 venv_class/
 __pycache__/
 FIFA.csv
+tmp/
