@@ -36,7 +36,6 @@ class MyTaskSet(TaskSet):
         print(r.status_code) 
 
 
-
 class MyUser(HttpUser):
     tasks = [MyTaskSet]
     wait_time = constant(10)  # Tempo entre as execuções das tarefas
