@@ -36,8 +36,6 @@ class KivyExample(App):
 
 
 
-
-
 if __name__ == '__main__':
     kivy = KivyExample()
     kivy.run()
