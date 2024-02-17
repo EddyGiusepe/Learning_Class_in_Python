@@ -1,6 +1,9 @@
 """
-Execução:
+Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
 
+
+Execução:
+---------
 $ streamlit run app.py
 """
 import pandas as pd 
@@ -10,7 +13,22 @@ import streamlit as st
 
 model = pk.load(open('./model_salvo_de_Car.pkl','rb'))
 
-st.header('🤗 Modelo ML de previsão de preço de carro 🤗')
+
+# URL da sua imagem:
+image_url = './Eddy_DataScientist.jpeg'
+# Imagem na barra lateral:
+st.sidebar.image(image_url, width=200, caption='')
+
+# Meus Dados pessoais:
+st.sidebar.header('ℹ️ :blue[Informações de contato] ℹ️')
+st.sidebar.markdown('<span style="color:red;">Data Scientist.:</span> Dr. Eddy Giusepe Chirinos Isidro', unsafe_allow_html=True)
+#st.sidebar.markdown('<span style="color:red;">Telefone:</span> (27) 9974-55087', unsafe_allow_html=True)
+st.sidebar.markdown('<span style="color:red;">e-mail:</span> eddychirinos.unac@gmail.com', unsafe_allow_html=True)
+st.sidebar.markdown('<span style="color:red;">[GitHub](https://github.com/EddyGiusepe)</span>', unsafe_allow_html=True)
+
+
+
+st.header('🤗 Machine Learning: previsão de preço de carro 🤗')
 
 cars_data = pd.read_csv('./Cardetails.csv')
 
@@ -20,22 +38,22 @@ def get_brand_name(car_name):
 
 cars_data['name'] = cars_data['name'].apply(get_brand_name)
 
-name = st.selectbox('Select Car Brand', cars_data['name'].unique())
-year = st.slider('Car Manufactured Year', 1994,2024)
-km_driven = st.slider('No of kms Driven', 11,200000)
-fuel = st.selectbox('Fuel type', cars_data['fuel'].unique())
-seller_type = st.selectbox('Seller  type', cars_data['seller_type'].unique())
-transmission = st.selectbox('Transmission type', cars_data['transmission'].unique())
-owner = st.selectbox('Seller  type', cars_data['owner'].unique())
-mileage = st.slider('Car Mileage', 10,40)
-engine = st.slider('Engine CC', 700,5000)
-max_power = st.slider('Max Power', 0,200)
-seats = st.slider('No of Seats', 5,10)
+name = st.selectbox('Selecione a marca do carro', cars_data['name'].unique())
+year = st.slider('Ano de fabricação do carro', 1994, 2024)
+km_driven = st.slider('N.º de quilómetros percorridos', 11, 200000)
+fuel = st.selectbox('Tipo de combustível', cars_data['fuel'].unique())
+seller_type = st.selectbox('Tipo de vendedor', cars_data['seller_type'].unique())
+transmission = st.selectbox('Tipo de transmissão', cars_data['transmission'].unique())
+owner = st.selectbox('tipo de dono', cars_data['owner'].unique())
+mileage = st.slider('Quilometragem do carro', 10,40)
+engine = st.slider('CC do motor', 700,5000)
+max_power = st.slider('Potência máxima', 0,200)
+seats = st.slider('N.º de assentos', 5,10)
 
 
-if st.button("Predict"):
+if st.button("predizer o preço"):
     input_data_model = pd.DataFrame(
-    [[name,year,km_driven,fuel,seller_type,transmission,owner,mileage,engine,max_power,seats]],
+            [[name, year, km_driven, fuel, seller_type, transmission, owner, mileage, engine, max_power, seats]],
     columns=['name','year','km_driven','fuel','seller_type','transmission','owner','mileage','engine','max_power','seats'])
     
     input_data_model['owner'].replace(['First Owner', 'Second Owner', 'Third Owner',
@@ -54,4 +72,4 @@ if st.button("Predict"):
 
     car_price = model.predict(input_data_model)
 
-    st.markdown('O preço do carro vai ser '+ str(car_price[0]))
+    st.markdown('O preço do carro, previsto, é '+ str(car_price[0]))
