@@ -16,6 +16,7 @@ class ProfessionalProfile:
 
 
 
+
 if __name__ == "__main__":
     # Instanciar o objeto:
     professionalProfile = ProfessionalProfile("Eddy Giusepe", 42, "PhD")
