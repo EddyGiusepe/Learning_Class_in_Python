@@ -18,21 +18,10 @@ class GarrafaGatorade:
         if volume is not None and volume <= 0:
             raise ValueError("O volume deve ser maior que zero.")
         
-        self._price = price
-        self._height = height
-        self._volume = volume
+        self.price = price
+        self.height = height
+        self.volume = volume
 
-    @property
-    def price(self) -> float:
-        return self._price
-
-    @property
-    def height(self) -> float:
-        return self._height
-
-    @property
-    def volume(self) -> float:
-        return self._volume
 
     def custo_da_garrafa(self) -> str:
         """
