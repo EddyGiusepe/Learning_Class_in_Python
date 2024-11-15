@@ -15,6 +15,7 @@ class Human(BaseModel):
     energy: int = Field(default=100, ge=0, le=100, description="Nível de energia") # energy: int = 100
     knowledge: int = Field(default=0, ge=0, description="Nível de conhecimento") # knowledge: int = 0
 
+    # É um decorador que é executado automaticamente pelo Pydantic:
     @field_validator('occupation')
     def validate_occupation(cls, v):
         valid_occupations = ["Senior Data Scientist", "Soccer player", "Developer"]
@@ -25,7 +26,7 @@ class Human(BaseModel):
     def work_that_does(self):
         if self.energy < 20:
             print(f"{self.name} está muito cansado(a) para trabalhar!")
-            return
+            return # Retorna None e encerra a função
             
         self.energy = self.energy - 20 # self.energy -= 20
         
@@ -38,6 +39,8 @@ class Human(BaseModel):
         else:
             print(f"{self.name} trabalha em outra área")
 
+        # Como não há um return explícito no final, também retorna None implicitamente.
+
     def rest(self, hours: int):
         energy_recovered = hours * 10
         self.energy = min(100, self.energy + energy_recovered)
@@ -47,12 +50,9 @@ class Human(BaseModel):
         if language not in self.languages:
             self.languages.append(language)
             self.knowledge += 2
-            print(f"{self.name} aprendeu {language}!")
+            print(f"{self.name} está aprendendo Inglês {language}!")
         else:
             print(f"{self.name} já sabe {language}")
-
-    class Config:
-        validate_assignment = True  # Valida também alterações após a criação
 
 
 
@@ -62,7 +62,7 @@ if __name__ == "__main__":
         ed = Human(
             name="Eddy",
             occupation="Senior Data Scientist",
-            age=30,
+            age=43,
             languages=["Português", "Espanhol"],
             skills=["Python", "Machine Learning", "Deep Learning"]
         )
@@ -80,5 +80,10 @@ if __name__ == "__main__":
         #     age=150  # Idade maior que o permitido
         # )
         
+        # Testando o retorno implícito de None:
+        test_None = ed.work_that_does()
+        print(test_None)
+
     except ValueError as e:
         print(f"Erro de validação: {e}")
+        
