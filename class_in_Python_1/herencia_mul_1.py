@@ -18,13 +18,20 @@ class C(B, A):
     def c(self):
        print("Este método é de C")
 
+
+
+
+
 if __name__ == "__main__":
+    print("Ele usa o __init__ da primeira classe na ordem de herança: ")
     x = C()
+
+    print("Agora imprimo o método c da classe C: ")
     x.c()
-    x.b()
-    x.a()
-    print("Usamos dois métodos para fazer as seguintes perguntas: ")
-    print(issubclass(C, B)) # C é uma subclass de B ?
-    print(issubclass(B, C))  # B é uma subclass de C ?
-    print("")
-    print(isinstance(x, C))  # x é uma instância de C ?
+    # x.b()
+    # x.a()
+    # print("Usamos dois métodos para fazer as seguintes perguntas: ")
+    # print(issubclass(C, B)) # C é uma subclass de B ?
+    # print(issubclass(B, C))  # B é uma subclass de C ?
+    # print("")
+    # print(isinstance(x, C))  # x é uma instância de C ?
