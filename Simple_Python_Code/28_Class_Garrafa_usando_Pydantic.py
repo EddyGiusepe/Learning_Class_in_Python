@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
+Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
 """
 from pydantic import BaseModel, Field, field_validator
 from typing import Optional
 import logging
 from colorama import Fore, Style, init
-# Inicializando o colorama
+# Inicializando o colorama:
 init(autoreset=True)
 
 
