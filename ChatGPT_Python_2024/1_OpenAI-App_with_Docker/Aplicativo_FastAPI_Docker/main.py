@@ -6,6 +6,16 @@ Execução do script
 ==================
 
 $ uvicorn main:app --reload
+
+Execução com Dockerfile e docker-compose
+----------------------------------------
+
+* sudo docker build -t fastapi-app .
+* sudo docker run -p 80:80 fastapi-app     ou    sudo docker run -d -p 80:80 fastapi-app
+
+* sudo docker compose up --build
+* sudo docker compose stop
+* sudo docker compose down  (Para parar e remover tudo (recomendado para desenvolvimento))
 """
 from typing import Dict, Any
 from fastapi import FastAPI

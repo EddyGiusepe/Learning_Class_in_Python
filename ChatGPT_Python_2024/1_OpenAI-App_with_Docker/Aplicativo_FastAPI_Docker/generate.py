@@ -15,7 +15,7 @@ def generate(question: str, llm: object, PromptTemplate: object) -> str:
     Returns:
         str: Resposta gerada pelo modelo de linguagem
     """
-    with open('../input_text.txt', 'r') as file:
+    with open('./input_text.txt', 'r') as file:
         input_text = file.read()  # Reads the entire file
         #print(content)
 
