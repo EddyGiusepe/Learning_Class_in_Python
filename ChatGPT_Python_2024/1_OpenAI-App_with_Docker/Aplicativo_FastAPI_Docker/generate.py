@@ -1,4 +1,20 @@
-def generate(question, llm, PromptTemplate):
+#! /usr/bin/env python3
+"""
+Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
+"""
+def generate(question: str, llm: object, PromptTemplate: object) -> str:
+    """
+    Gera uma resposta para uma pergunta sobre as eleições presidenciais dos EUA de 2024
+    usando um modelo de linguagem.
+
+    Args:
+        question (str): A pergunta do usuário sobre as eleições
+        llm (object): Instância do modelo de linguagem a ser utilizado
+        PromptTemplate (object): Classe para criar templates de prompt
+
+    Returns:
+        str: Resposta gerada pelo modelo de linguagem
+    """
     with open('../input_text.txt', 'r') as file:
         input_text = file.read()  # Reads the entire file
         #print(content)

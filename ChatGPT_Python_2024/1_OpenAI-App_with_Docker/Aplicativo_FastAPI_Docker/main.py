@@ -40,13 +40,13 @@ class Body(BaseModel):
     """Modelo Pydantic para o corpo da requisição."""
     text: str
 
-    class Config:
-        """Configuração do modelo Pydantic."""
-        json_schema_extra = {
+    model_config = { # O model_config é parte da configuração do modelo Pydantic (versão 2.x). É usado para configurar metadados e comportamentos do modelo.
+        "json_schema_extra": {
             "example": {
                 "text": "Qual é a capital do Brasil?"
             }
         }
+    }
 
 class LLMApp:
     """Classe principal do aplicativo FastAPI."""
