@@ -1,4 +1,0 @@
-[core]
-    remote = eddy-storage
-['remote "eddy-storage"']
-    url = gs://dvc-eddy.firebasestorage.app
