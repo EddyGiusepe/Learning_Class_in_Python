@@ -130,3 +130,5 @@ tmp/
 config.py
 9.1 - Secretaria de Saúde - Cidadão.pdf
 .vscode/
+dataset/
+dvc-eddy-firebase-adminsdk-tdtvv-caf5388ced.json
